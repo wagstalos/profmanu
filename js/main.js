@@ -129,11 +129,11 @@ $(document).ready(function () {
   swiperHome();
   swiperHomePrice();
   swiperManu();
-  displayFullYear(".myDate");
 });
 
 $.get("./templates/footer.html", function (data) {
   $("#footer-placeholder").replaceWith(data);
+  displayFullYear(".myDate");
 });
 
 $.get("./templates/navbar.html", function (data) {
