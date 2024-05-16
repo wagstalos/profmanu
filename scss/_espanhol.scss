@@ -1,0 +1,135 @@
+.s-espanhol {
+    padding: 70px 0;
+    a {
+        text-decoration: none;
+        color: $color-dark;
+    }
+    b {
+        color: $main-color;
+    }
+    i {
+        font-size: 25px;
+        transition: all 0.5s;
+        &:hover {
+            background-color: $main-color;
+            color: $white;
+        }
+    }
+    h1 {
+        color: $main-color;
+        font-size: 2.5rem;
+        span {
+            font-weight: 700;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $main-color;
+            // font-size: 1.2em;
+            color: transparent;
+            line-height: 60px;
+        }
+    }
+    h6 {
+        color: $main-color;
+        font-size: 4.5rem;
+        span {
+            font-weight: 700;
+            -webkit-text-stroke-width: 1.2px;
+            -webkit-text-stroke-color: $color-dark;
+            font-size: 1.1em;
+            color: transparent;
+            opacity: 0.1;
+            line-height: 60px;
+            margin-top: -88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    h3,
+    h2 {
+        span {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: $main-color;
+            line-height: 60px;
+            margin: 0;
+        }
+    }
+    .square {
+        position: absolute;
+        max-width: 100%;
+        background: linear-gradient(180deg, #ffdc6b 0%, #fdfdfd 100%);
+        width: 100%;
+        height: 100vh;
+        left: 0px;
+        top: 0px;
+    }
+
+    .video {
+        border-radius: 20px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .card-price {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .modal-dialog {
+        max-width: 800px;
+        margin: 30px auto;
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 0px;
+    }
+    .btn-close {
+        position: absolute;
+        right: -30px;
+        top: 0;
+    }
+    .free {
+        background-color: #ffecd8;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #fde0c2;
+    }
+
+    iframe {
+        border-radius: 20px;
+        border: 5px solid $main-color;
+        margin-bottom: 40px;
+        height: 450px;
+    }
+}
+.btn-whats {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.my-float {
+    margin-top: 12px;
+    margin-left: -10px;
+    position: absolute;
+    font-size: 24px;
+}
+
+.contato-banner {
+    border: 1px #ffc107 solid;
+    padding: 10px;
+    border-radius: 11px;
+    display: inline-block;
+}
+.diferenciais {
+    width: 150px;
+    text-align: left;
+}

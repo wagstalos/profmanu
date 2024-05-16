@@ -1,0 +1,301 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: $white;
+}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("http://i.imgur.com/zAD2y29.gif") 50% 50% no-repeat white;
+}
+
+.bg-light-espanhol {
+    background-color: #f6f6f6;
+}
+
+.color-main {
+    color: $main-color;
+}
+.color-yellow-dark {
+    color: $color-yellow-dark;
+}
+.back-gray-light {
+    background-color: $gray-light !important;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+.font-slim {
+    font-weight: 300;
+}
+.padding-custom {
+    padding: 50px 0;
+}
+.icon-custom {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: $main-color;
+    border: 1px $main-color solid;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.border-flag {
+    border: rgba(252, 242, 232, 0.4) 4px solid;
+    border-radius: 100%;
+}
+
+.back-yellow-light {
+    background-color: $color-yellow-light;
+    border-radius: 10px;
+}
+.back-yellow-light-100 {
+    background-color: $color-yellow-light-100;
+    border-radius: 10px;
+}
+.bg-icon {
+    background: $color-yellow-light-100;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 20px;
+}
+.bg-icon-5 {
+    background: $color-yellow-light-100;
+    border-radius: 15px;
+    padding: 5px;
+}
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+/* bt5 */
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(255, 155, 0, 0.15) !important;
+}
+.btn {
+    border-radius: 25px;
+    padding: 0.9rem 2rem;
+}
+.btn-light {
+    transition: all 0.5s;
+    &:hover {
+        border-color: $main-color;
+        background-color: $main-color;
+        color: $white;
+    }
+}
+
+.btn-orange {
+    transition: all 0.5s;
+    background-color: $main-color;
+    font-weight: bold;
+
+    &:hover {
+        border-color: $main-color;
+        background-color: $color-yellow-light-50;
+    }
+}
+.dropdown-menu {
+    box-shadow: 0 0.5rem 1rem rgba(255, 155, 0, 0.15) !important;
+}
+.show {
+    border-radius: 13px;
+    border: none;
+
+    a {
+        &:hover {
+            background-color: $color-yellow-light;
+            border-radius: 13px;
+        }
+    }
+}
+.mr-2 {
+    margin-right: 0.5rem;
+}
+.accordion-button {
+    background-color: $white;
+}
+.accordion-item {
+    margin-bottom: 15px;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: $white;
+    background-color: $gray;
+}
+// swiper
+:root {
+    --swiper-theme-color: #ef9e48;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 10%;
+}
+.swiper-pagination-bullet-active {
+    width: 17px;
+}
+.swiper-pagination-clickable {
+    z-index: -1;
+}
+.swiper-pagination {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // text-align: end;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    .swiper-pagination-bullet {
+        transition: all 0.3s;
+        &:not(:first-child) {
+            margin-left: 0.4rem;
+        }
+    }
+}
+.swiper-pagination-manu {
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    // text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    .swiper-pagination-bullet {
+        transition: all 0.3s;
+        &:not(:first-child) {
+            margin-left: 0.4rem;
+        }
+    }
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    z-index: -2;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    bottom: 10%;
+    right: auto;
+    left: 40px;
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    bottom: 10%;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: none;
+    isolation: isolate;
+    border-bottom: $main-color 2px solid;
+    transition: 0.3s;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: $white;
+    background-color: $main-color;
+    border-color: #dee2e6;
+    font-weight: 500;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    color: $color-yellow-dark;
+    border-color: none;
+    isolation: isolate;
+    border-bottom: $main-color 2px solid;
+    transition: 0.3s;
+}
+.nav-tabs .nav-link {
+    background: 0 0;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-color: $gray-light;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 10px 30px #eaeef6;
+    box-shadow: 0px 10px 30px #eaeef6;
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all 0.3s;
+    padding: 11px;
+    margin-right: 12px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-link {
+    color: $color-dark;
+}
+
+// modal
+.btn-close {
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    background-image: url("../img/x.svg");
+}
+.btn-success {
+    background-color: $main-color;
+    border-color: $color-yellow;
+    color: #212121;
+    &:hover {
+        background-color: $color-yellow;
+        color: #212121;
+    }
+}
+.modal-header {
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #212121;
+    color: aliceblue;
+}
+.modal-header {
+    border-bottom: 1px solid #454545;
+}
+.modal-footer {
+    border-top: 1px solid #454545;
+}
+
+.black-friday {
+    background-color: $color-yellow;
+    border-radius: 10px;
+    padding: 6px;
+    font-weight: 700;
+    color: $color-dark;
+}
+
+.msg-promotion {
+    background-color: #ffecd8;
+    border-radius: 29px;
+    padding: 1px 16px;
+    border: 1px solid #fde0c2;
+    margin-bottom: 38px;
+    font-weight: 500;
+    display: table;
+    margin: 0 auto;
+}
+.msg-promotion:empty {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
