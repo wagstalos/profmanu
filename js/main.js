@@ -64,15 +64,48 @@ function swiperHomePrice() {
   });
 }
 
+// function swiperManu() {
+//   var swiper3 = new Swiper(".mySwiper-manu", {
+//     pagination: {
+//       el: ".swiper-pagination-manu",
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     breakpoints: {
+//       300: {
+//         slidesPerView: 1.05,
+//         spaceBetween: 5,
+//       },
+//       1024: {
+//         slidesPerView: 2.2,
+//         spaceBetween: 10,
+//       },
+//     },
+//   });
+// }
 function swiperManu() {
   var swiper3 = new Swiper(".mySwiper-manu", {
+    on: {
+      beforeInit: function () {
+        const wrapper = this.el.querySelector(".swiper-wrapper");
+
+        Array.from(wrapper.children)
+          .reverse()
+          .forEach((slide) => wrapper.appendChild(slide));
+      },
+    },
+
     pagination: {
       el: ".swiper-pagination-manu",
     },
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
     breakpoints: {
       300: {
         slidesPerView: 1.05,
@@ -162,7 +195,7 @@ if ("serviceWorker" in navigator) {
       // Registro realizado com sucesso (NOTA: Observe que declaro um arquivo chamado sw.js, ele é onde colocaremos as notações do nosso Service Workers)
       console.log(
         "O ServiceWorker foi registrado com escopo: ",
-        registration.scope
+        registration.scope,
       );
     })
     .catch(function (err) {
