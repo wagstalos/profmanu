@@ -126,27 +126,53 @@ function displayFullYear(element) {
   year.innerText = getYear;
 }
 
+// function price() {
+//   // URL da API web do Google Apps Script
+//   const url =
+//     "https://script.googleusercontent.com/macros/echo?user_content_key=fspkvkXKFcdF1OKzY7Ww0Ygvqkixx0_8PRMaUfYlvaGD0BHpPry2zZhV5Vy_DlRNAMneQhIwdSRkysuiu4CXuWF8eWCsTfa6m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGxV2ptZgjkHtsvNiaE3glHqxaqFRaEMvo-M9KthEgyXjCVbegnPU3dPiSGSlh5WQ3KaCgsh9QPEHOpaQG8HAKy2iFG_EfrtuA&lib=McWWPsEVZWtAeRcVh3roohzLob1edPsIR";
+
+//   // Realizar a requisição AJAX
+//   $.ajax({
+//     url: url,
+//     dataType: "jsonp",
+//     success: function (data) {
+//       // Verificar se 'price' está presente nos dados e exibir o preço
+//       if (data.length > 0 && data[0].hasOwnProperty("price")) {
+//         $(".js-price").text(data[0].price);
+//         $(".js-msg").text(data[0].msg);
+//       } else {
+//         $(".js-price").text("A combinar");
+//       }
+//     },
+//     error: function (jqXHR, textStatus, errorThrown) {
+//       console.error("Erro ao carregar os dados:", textStatus, errorThrown);
+//       $(".js-price").text("A combinar");
+//     },
+//   });
+// }
+
 function price() {
-  // URL da API web do Google Apps Script
-  var url =
+  const url =
     "https://script.googleusercontent.com/macros/echo?user_content_key=fspkvkXKFcdF1OKzY7Ww0Ygvqkixx0_8PRMaUfYlvaGD0BHpPry2zZhV5Vy_DlRNAMneQhIwdSRkysuiu4CXuWF8eWCsTfa6m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGxV2ptZgjkHtsvNiaE3glHqxaqFRaEMvo-M9KthEgyXjCVbegnPU3dPiSGSlh5WQ3KaCgsh9QPEHOpaQG8HAKy2iFG_EfrtuA&lib=McWWPsEVZWtAeRcVh3roohzLob1edPsIR";
 
-  // Realizar a requisição AJAX
   $.ajax({
     url: url,
-    dataType: "json",
+    type: "GET",
+    dataType: "jsonp",
+    timeout: 15000,
+
     success: function (data) {
-      // Verificar se 'price' está presente nos dados e exibir o preço
-      if (data.length > 0 && data[0].hasOwnProperty("price")) {
+      if (Array.isArray(data) && data.length > 0 && data[0].price) {
         $(".js-price").text(data[0].price);
-        $(".js-msg").text(data[0].msg);
+        $(".js-msg").text(data[0].msg || "");
       } else {
         $(".js-price").text("A combinar");
       }
     },
+
     error: function (jqXHR, textStatus, errorThrown) {
       console.error("Erro ao carregar os dados:", textStatus, errorThrown);
-      $(".js-price").text("A Combinar");
+      $(".js-price").text("A combinar");
     },
   });
 }
